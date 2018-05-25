@@ -11,9 +11,15 @@ See [`bookmarks.py`](bookmarks.py).
 
 ## How to use pyBookmarks
 
-Install Python3 and pyBookmarks dependencies. In Debian and Ubuntu Linux,
-open a terminal and type  
+Install Python3 and pyBookmarks dependencies.
+
+For Debian and Ubuntu Linux, open a terminal and type the following:  
 `sudo apt install python3 python3-pip python3-bottle python3-gevent sqlite3`.
+
+For macOS and Windows, download installers form the following websites:  
+`https://www.python.org/downloads/release/python-365/`.
+
+In macOS and Windows, open a terminal and type `pip3 install bottle, gevent` 
 
 Usage is as follows. Open a terminal, cd to the pyBookmarks folder
 and type `python3 -m bookmarks`. Then open a browser using this link:
