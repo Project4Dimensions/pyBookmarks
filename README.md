@@ -4,8 +4,17 @@ Research and development: Project4Dimensions
 
 ## Why pyBookmarks?
 
-pyBookmarks is a web application to create, retrieve, update and delete
-bookmarks using any modern web browser.
+Switching between web browsers often involves exporting and importing
+bookmarks and keeping these up-to-date.
+
+Some web browser bookmark managers lack fields for tags and notes.
+
+pyBookmarks offers a cross-browser solution that can also be used off-line.
+Use this web application to create, retrieve, update, and delete bookmarks
+using any modern web browser.
+
+The Browse Happy website suggests suitable browsers.  
+[`https://browsehappy.com/`](https://browsehappy.com/)
 
 See [`bookmarks.py`](bookmarks.py).
 
@@ -14,25 +23,33 @@ See [`bookmarks.py`](bookmarks.py).
 Install Python3 and pyBookmarks dependencies.
 
 For Debian and Ubuntu Linux, open a terminal and type the following:  
-`sudo apt install python3 python3-pip python3-bottle python3-gevent sqlite3`.
+`sudo apt install python3 python3-pip python3-bottle python3-eventlet sqlite3`.
 
-For macOS and Windows, download installers form the following websites:  
-`https://www.python.org/downloads/release/python-365/`.
+For macOS and Windows, download installers from the following websites:  
+[`https://www.python.org/downloads/`](https://www.python.org/downloads/)  
+[`https://www.sqlite.org/download.html`](https://www.sqlite.org/download.html)  
 
-In macOS and Windows, open a terminal and type `pip3 install bottle, gevent` 
+In macOS and Windows, open a terminal and type  
+`pip3 install bottle eventlet`
 
-Usage is as follows. Open a terminal, cd to the pyBookmarks folder
-and type `python3 -m bookmarks`. Then open a browser using this link:
-[`http://localhost:8118/`](http://localhost:8118/).
+For Android, install and open Termux; then type  
+`pgk update`  
+`pgk upgrade`  
+`pkg install sqlite python3`  
+`python3 -m pip install --upgrade pip`  
+`pip install bottle`  
+`pip install eventlet`
 
-## Discussion
+Usage is as follows below.
 
-Switching between web browsers often involves exporting and importing
-bookmarks and keeping these up-to-date.
+Open a terminal, cd to the pyBookmarks folder and type    
+`python3 -m bookmarks`
 
-Some web browser bookmark managers lack fields for tags and notes.
+In a web browser, paste and go to this link:  
+[`http://localhost:8118`](http://localhost:8118/)
 
-pyBookmarks offers a cross-browser solution that can also be used off-line.
+To import Firefox bookmarks, read this file:  
+[`bookmarks-json2sql.md`](bookmarks-json2sql.md).
 
 ## References
 
