@@ -15,36 +15,40 @@
 
 # usage: python3 -m bookmarks
 
-from bottle import Bottle, debug, error, request, route, run, static_file, template
-import eventlet, os, re, sqlite3, sys
+from bottle import request, route, run, static_file, template
+import eventlet, os, os.path, re, sqlite3, sys
 
 # @route(r'/docs/<filename:re:.*\.ico>')
 # def send_image(filename):
     # # mimetype='image/vnd.microsoft.icon'
     # return static_file(filename, root='/docs', mimetype='image/x-icon')
 
-@route(r'/docs/<filename:re:.*\.png>')
-def send_image(filename):
-    return static_file(filename, root='/docs', mimetype='image/png')
+@route(r'/docs/assets/css/<filepath:re:.*\.css>')
+def css(filepath):
+    return static_file(filepath, root='docs/assets/css')
 
-@route(r'/docs/<filename:re:.*\.css>')
-def send_css(filename):
-    return static_file(filename, root='/docs/assets/css')
+@route(r'/docs/assets/fonts/<filepath:re:.*\.(eot|otf|svg|ttf|woff|woff2?)>')
+def font(filepath):
+    return static_file(filepath, root='docs/assets/fonts')
 
-@route(r'/docs/<filename:re:.*\.js>')
-def send_js(filename):
-    return static_file(filename, root='/docs/assets/js')
+@route(r'/docs/assets/images/<filepath:re:.*\.(gif|ico|jpg|png|svg)>')
+def img(filepath):
+    return static_file(filepath, root='docs/assets/images')
+
+@route(r'/docs/assets/js/<filepath:re:.*\.js>')
+def js(filepath):
+    return static_file(filepath, root='docs/assets/js')
 
 @route('/docs/<filename:path>')
 # def server_static(filepath):
-def send_static(filename):
-    return static_file(filename, root='/docs')
+def send_static(filepath):
+    return static_file(filepath, root='/docs')
 
 # path to database file
-db = './docs/bookmarks.db'
+db = 'docs/bookmarks.db'
 
 # path to templates folder
-tpl = './docs/bookmarks/views/'
+tpl = 'docs/bookmarks/views/'
 
 # title: html head
 ttlb = 'Bookmarks » '

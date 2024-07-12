@@ -14,7 +14,8 @@
 <link rel="mask-icon" color="#5bbad5" href="/docs/assets/favicons/safari-pinned-tab.svg">
 <link rel="shortcut icon" href="/docs/assets/favicons/favicon.ico">
 -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/docs/favicon.ico" -->
+<!-- … type="image/x-icon" href="/docs/assets/favicons/favicon.ico" -->
 <link rel="stylesheet" href="/docs/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/docs/assets/css/style2.css">
 <title>{{title}}</title>
 </head>

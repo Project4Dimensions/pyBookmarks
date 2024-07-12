@@ -4,7 +4,6 @@
 <body class="d-flex flex-column h-100">
 <main role="main" class="container mt-3 flex-shrink-0">
   % include(tpl + 'h1', h1=title + 'search')
-  % include(tpl + 'navigation')
   <div class="card mb-3">
     <div class="card-body">
       <p class="card-text text-secondary">
@@ -16,7 +15,7 @@
               Tags in lowercase (e.g., duck test)
             </small>
           </div>
-          <button type="submit" class="btn btn-info" name="search" value="search">
+          <button type="submit" class="btn btn-outline-secondary" name="search" value="search">
             Search
           </button>
         </form>

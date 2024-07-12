@@ -4,8 +4,7 @@
 <body class="d-flex flex-column h-100">
 <main role="main" class="container mt-3 flex-shrink-0">
   % include(tpl + 'h1', h1=title + 'create')
-  % include(tpl + 'navigation')
-  % include(tpl + 'form', path='/create', title='', uri='', tags='', note='', name='create', label='Create')
+  % include(tpl + 'form', path='/create', title='', uri='', tags='', note='', name='create', label='create')
 </main>
 %include(tpl + 'footer')
 %include(tpl + 'javascript')

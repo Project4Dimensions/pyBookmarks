@@ -7,22 +7,22 @@
   <div class="card mb-3">
     <div class="card-body">
       <p class="card-text text-secondary">
-        <span class="text-monospace">title &vellip;&nbsp;</span>
+        <span class="text-monospace">title  &vellip;&nbsp;</span>
         {{title}}<br>
-        <span class="text-monospace">uri &vellip;&nbsp;</span>
-        <!-- text-secondary -->
-        <a href="{{uri}}" class="text-info">
+        <span class="text-monospace">uri  &nbsp;&nbsp;&vellip;&nbsp;</span>
+        <!-- text-info -->
+        <a href="{{uri}}" class="text-secondary">
           {{uri}}
         </a><br>
-        <span class="text-monospace">tags &vellip;&nbsp;</span>
+        <span class="text-monospace">tags &nbsp;&vellip;&nbsp;</span>
         {{tags}}<br>
-        <span class="text-monospace">note &vellip;&nbsp;</span>
+        <span class="text-monospace">note &nbsp;&vellip;&nbsp;</span>
         {{!note}}
       </p>
       % if update_delete=='1':
       <p class="card-text text-secondary">
-        <a href="/update/{{id}}" class="text-info">update</a> ·
-        <a href="/delete/{{id}}" class="text-info">delete</a>
+        <a href="/update/{{id}}" class="text-secondary">update</a> ·
+        <a href="/delete/{{id}}" class="text-secondary">delete</a>
       </p>
       % end
     </div>

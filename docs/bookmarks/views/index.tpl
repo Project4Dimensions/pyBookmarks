@@ -4,7 +4,6 @@
 <body class="d-flex flex-column h-100">
 <main role="main" class="container mt-3 flex-shrink-0">
   % include(tpl + 'h1', h1=title + 'start')
-  % include(tpl + 'navigation')
   <div class="card mb-3">
     <div class="card-body">
       <p class="card-text text-secondary">
